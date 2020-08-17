@@ -58,24 +58,27 @@ class ToDoList extends List {
     };
 };
 
-class ContactList extends ToDoList{
-    constructor(...args) {
-        super(...args);
+class ContactList {
+    constructor (notes){
+        this.notes = notes
     };
 
     searchForANote = function (id) {
-        this.notes = this.notes.filter(note => note.id === id);
+        return this.notes.filter(note => note.id.toString() === id.toString());
     };
 };
 
-const myNewNote = new ContactList;
+/* const myNewNote = new ToDoList;
 myNewNote.addNote('lala');
 myNewNote.editNote(1596559757142, 'Valera', true);
-console.log(myNewNote.searchForANote(1596559756940));
 console.log(myNewNote.getStatistic());
-
-const myNewNote2 = new ContactList;
-myNewNote2.removeNote(1596559756940, true);
-
 console.log(myNewNote);
-console.log(myNewNote2);
+
+const myNewNote2 = new ContactList(myNewNote.notes);
+const searchedNote = myNewNote2.searchForANote('1596559756940');
+
+console.log(myNewNote2)
+console.log(searchedNote) */
+
+/* console.log(myNewNote);
+console.log(myNewNote2); */
