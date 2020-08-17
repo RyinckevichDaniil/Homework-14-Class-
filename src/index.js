@@ -63,22 +63,22 @@ class ContactList {
         this.notes = notes
     };
 
-    searchForANote = function (id) {
-        return this.notes.filter(note => note.id.toString() === id.toString());
+    searchForANote = function (value) {
+        return this.notes.filter(note => note.value.toString() === value.toString());
     };
 };
 
-/* const myNewNote = new ToDoList;
+const myNewNote = new ToDoList;
 myNewNote.addNote('lala');
 myNewNote.editNote(1596559757142, 'Valera', true);
 console.log(myNewNote.getStatistic());
 console.log(myNewNote);
 
 const myNewNote2 = new ContactList(myNewNote.notes);
-const searchedNote = myNewNote2.searchForANote('1596559756940');
+const searchedNote = myNewNote2.searchForANote('World');
 
 console.log(myNewNote2)
-console.log(searchedNote) */
+console.log(searchedNote)
 
-/* console.log(myNewNote);
-console.log(myNewNote2); */
+console.log(myNewNote);
+console.log(myNewNote2);
