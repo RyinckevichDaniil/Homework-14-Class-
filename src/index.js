@@ -34,13 +34,13 @@ class List {
     removeNote (id, confirm) {
         if (confirm) {
             this.notes = this.notes.filter(note => note.id !== id);
-        };note => note.id !== id
+        };
     };
 };
 
 class ToDoList extends List {
 
-    getStatistic = function () {
+    getStatistic () {
         return this.notes.reduce(
             (acc, note) => {
                 note.completed && acc.completed++;
@@ -58,10 +58,7 @@ class ToDoList extends List {
     };
 };
 
-class ContactList {
-    constructor (notes){
-        this.notes = notes
-    };
+class ContactList extends List{
 
     searchForANote = function (value) {
         return this.notes.filter(note => note.value.toString() === value.toString());
@@ -71,6 +68,7 @@ class ContactList {
 const myNewNote = new ToDoList;
 myNewNote.addNote('lala');
 myNewNote.editNote(1596559757142, 'Valera', true);
+myNewNote.completeNote(1596559757142);
 console.log(myNewNote.getStatistic());
 console.log(myNewNote);
 
